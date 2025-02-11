@@ -1,0 +1,50 @@
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        return "Error: Division by zero is not possible"
+    return a / b
+
+def exponent(a,b):
+    return a**b
+
+def main():
+    while True:
+        print("Options:")
+        print("Enter 'add' for addition")
+        print("Enter 'subtract' for subtraction")
+        print("Enter 'multiply' for multiplication")
+        print("Enter 'divide' for division")
+        print("Enter 'exponent' for exponent")
+        print("Enter 'exit' to end the calculator")
+
+        user_input = input(": ")
+
+        if user_input == "exit":
+            break
+        elif user_input in ('add', 'subtract', 'multiply', 'divide','exponent'):
+            number1 = float(input("Enter first number: "))
+            number2 = float(input("Enter second number: "))
+
+            if user_input == "add":
+                print("Result: ", add(number1, number2))
+            elif user_input == "subtract":
+                print("Result: ", subtract(number1, number2))
+            elif user_input == "multiply":
+                print("Result: ", multiply(number1, number2))
+            elif user_input == "divide":
+                print("Result: ", divide(number1, number2))
+            elif user_input == "exponent":
+                print("Result: ", exponent(number1, number2))
+        else:
+            print("Unspecified input")
+
+if __name__ == "__main__":
+    main()
